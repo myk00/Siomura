@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Siomura.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Siomura"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="False"
+    Shell.BackgroundColor="Black"
+       Shell.TitleColor="White"
+       Shell.ForegroundColor="White"
+       Shell.DisabledColor="Gray"
+       Shell.UnselectedColor="White"
+       Shell.NavBarHasShadow="False">
+
+    <Shell.FlyoutHeader>
+        <Image Source="logoo.png" WidthRequest="100"></Image>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Home" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="Products"
+            ContentTemplate="{DataTemplate local:Products}"
+            Route="Products" />
+
+        <ShellContent
+            Title="Order Now"
+            ContentTemplate="{DataTemplate local:OrderNow}"
+            Route="OrderNow" />
+    </FlyoutItem>
+
+</Shell>
