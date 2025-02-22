@@ -17,9 +17,10 @@
 
         <ScrollView>
             <VerticalStackLayout Spacing="20" Padding="40">
-                <Label Text="Order Now !" FontAttributes="Bold" FontSize="24" TextColor="White" HorizontalOptions="Center"/>
 
                 <!-- Product Selection -->
+                <Label Text="Select a Product" FontAttributes="Bold" FontSize="22" TextColor="White" HorizontalOptions="Center"/>
+
                 <Picker x:Name="ProductPicker" Title="Choose a Product" TextColor="White" SelectedIndexChanged="OnProductChanged">
                     <Picker.Items>
                         <x:String>Siomai Bilao - ₱599</x:String>
@@ -34,13 +35,31 @@
 
                 <!-- Product Name & Price -->
                 <Label x:Name="ProductName" Text="Siomai Bilao" FontAttributes="Bold" FontSize="24" TextColor="White" HorizontalOptions="Center"/>
-                
+                <Label x:Name="ProductPrice" Text="₱599.00" FontSize="20" TextColor="LightGreen" HorizontalOptions="Center"/>
 
                 <!-- Quantity Selection -->
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
                     <Label Text="Quantity:" FontSize="18" TextColor="White"/>
                     <Entry x:Name="QuantityEntry" Text="1" WidthRequest="50" TextColor="Black" BackgroundColor="White" Keyboard="Numeric"/>
                 </HorizontalStackLayout>
+
+                <!-- User Information -->
+                <Label Text="Details" FontAttributes="Bold" FontSize="22" TextColor="White" HorizontalOptions="Center"/>
+
+                <Entry x:Name="CustomerNameEntry"
+                       Placeholder="Enter your name"
+                       TextColor="White"
+                       PlaceholderColor="LightGray"
+                       BackgroundColor="Black"
+                       HorizontalOptions="FillAndExpand"/>
+
+                <Entry x:Name="ContactNumberEntry"
+                       Placeholder="Enter your contact number"
+                       TextColor="White"
+                       PlaceholderColor="LightGray"
+                       BackgroundColor="Black"
+                       Keyboard="Telephone"
+                       HorizontalOptions="FillAndExpand"/>
 
                 <!-- Payment Method -->
                 <VerticalStackLayout Padding="10">
@@ -53,7 +72,7 @@
                 <!-- GCash Details (Hidden Initially) -->
                 <VerticalStackLayout x:Name="GCashDetails" IsVisible="False" Padding="1">
                     <Label Text="Send payment to this GCash number:" FontAttributes="Bold" FontSize="16" TextColor="White"/>
-                    <Label Text="📱 09222666777 (S*****a W.)" FontSize="18" TextColor="LightBlue"/>
+                    <Label Text="📱 0917-123-4567 (Siomura)" FontSize="18" TextColor="LightBlue"/>
                 </VerticalStackLayout>
 
                 <!-- Confirm Order Button -->
