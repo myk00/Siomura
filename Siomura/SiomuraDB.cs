@@ -6,7 +6,7 @@ namespace Siomura
     public class SiomuraDB
     {
         // ✅ Fixed connection string (Removed extra escape characters)
-        private string connectionString = "server=127.0.0.1;port=3306;database=SiomuraDB;user=root;password=toytoynitutoy21;";
+        private string connectionString = "server=10.0.2.2;port=3306;database=SiomuraDB;user=root;password=toytoynitutoy21;";
 
         public bool SaveOrder(string customerName, string contactNumber, string product, int quantity, decimal totalPrice, string paymentMethod)
         {

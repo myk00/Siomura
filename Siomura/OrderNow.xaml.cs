@@ -8,7 +8,7 @@ namespace Siomura
     public partial class OrderNow : ContentPage
     {
         // ✅ Correct MySQL Connection String with your credentials
-        private string connectionString = "server=127.0.0.1;port=3306;database=SiomuraDB;user=root;password=toytoynitutoy21;";
+        private string connectionString = "server=10.0.2.2;port=3306;database=SiomuraDB;user=root;password=toytoynitutoy21;";
 
         private string selectedProduct = "Siomai Bilao";
         private decimal selectedPrice = 599.00m;
