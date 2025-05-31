@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Siomura.Products"
+             Title="Products">
+
+    <Grid>
+        
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="DarkRed" Offset="0.1"/>
+                    <GradientStop Color="Black" Offset="1.0"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <ScrollView>
+            <VerticalStackLayout Spacing="30" Padding="20">
+                
+                
+
+                
+                <Label FontSize="28" FontAttributes="Bold" TextColor="White" Text="Our Products" 
+                   HorizontalOptions="Center" Margin="0,10,0,20"/>
+
+               
+                <Grid Padding="2" ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
+                    
+                    <VerticalStackLayout Spacing="10" Padding="10" Grid.Column="0" HorizontalOptions="Center">
+                        <Image Source="qpal1.jpg" Aspect="AspectFit" HeightRequest="160" WidthRequest="160"/>
+                        <Label Text="Siomai Bilao" FontAttributes="Bold" FontSize="18" TextColor="White" 
+                           HorizontalOptions="Center" Margin="0,5,0,20"/>
+                    </VerticalStackLayout>
+
+                    
+                    <VerticalStackLayout Spacing="10" Padding="10" Grid.Column="1" HorizontalOptions="Center">
+                        <Image Source="siopugo.png" Aspect="AspectFit" HeightRequest="160" WidthRequest="160"/>
+                        <Label Text="Siomai Pugo" FontAttributes="Bold" FontSize="18" TextColor="White" 
+                           HorizontalOptions="Center" Margin="0,5,0,20"/>
+                    </VerticalStackLayout>
+
+                    
+                    <VerticalStackLayout Spacing="10" Padding="10" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center">
+                        <Image Source="pbackground.jpg" Aspect="AspectFit" HeightRequest="160" WidthRequest="160"/>
+                        <Label Text="Fried Noodles" FontAttributes="Bold" FontSize="18" TextColor="White" 
+                           HorizontalOptions="Center" Margin="0,5,0,20"/>
+                    </VerticalStackLayout>
+
+                    
+                    <VerticalStackLayout Spacing="10" Padding="10" Grid.Column="1" Grid.Row="1" HorizontalOptions="Center">
+                        <Image Source="premiums.png" Aspect="AspectFit" HeightRequest="160" WidthRequest="160"/>
+                        <Label Text="Premium Siomai" FontAttributes="Bold" FontSize="18" TextColor="White" 
+                           HorizontalOptions="Center" Margin="0,5,0,20"/>
+                    </VerticalStackLayout>
+                </Grid>
+
+                <Label Text="Order Now"
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Padding="10">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOrderNowTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+
+               
+                <VerticalStackLayout Padding="20" Margin="0,40,0,20" HorizontalOptions="Center">
+                    <Label Text="Contact and Information"
+               FontSize="22"
+               TextColor="White"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"/>
+                    <Label Text="Looking for more information? Email Us"
+               FontSize="16"
+               TextColor="White"
+               HorizontalOptions="Center"
+               Margin="0,5,0,20"/>
+                    <Grid ColumnDefinitions="*,*" Padding="10" HorizontalOptions="FillAndExpand">
+                       
+                        <VerticalStackLayout Spacing="5" Padding="10" Grid.Column="0" HorizontalOptions="StartAndExpand">
+                            <Label Text="Head Office" FontAttributes="Bold" TextColor="White"/>
+                            <Label Text="11 A Bonifacio, Quezon City, Metro Manila, Philippines"
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap"/>
+                            <Label Text="Office Hours" FontAttributes="Bold" TextColor="White" Margin="0,10,0,0"/>
+                            <Label Text="MONDAY – FRIDAY 9:00am – 5:00pm"
+                           FontSize="14"
+                           TextColor="White"/>
+                        </VerticalStackLayout>
+
+                        
+                        <VerticalStackLayout Spacing="5" Padding="10" Grid.Column="1" HorizontalOptions="EndAndExpand">
+                            <Label Text="Customer Service" FontAttributes="Bold" TextColor="White"/>
+                            <Label Text="(02) 8 709 5288" FontSize="14" TextColor="White"/>
+                            <Label Text="(02) 8 709 0901" FontSize="14" TextColor="White"/>
+                            <Label Text="Franchising" FontAttributes="Bold" TextColor="White" Margin="0,20,0,0"/>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Email: " TextColor="White"/>
+                                        <Span Text="siomura.ph@gmail.com" TextColor="LightBlue"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </VerticalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+    
+</ContentPage>

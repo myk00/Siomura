@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Siomura.MainPage">
+
+    <Grid>
+        
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="Black" Offset="0.3"/>
+                    <GradientStop Color="Red" Offset="1.0"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <ScrollView>
+            <VerticalStackLayout>
+                
+                <VerticalStackLayout VerticalOptions="Start" HorizontalOptions="Center" Padding="20">
+                    <Image Source="logoo.png" Aspect="AspectFit" HeightRequest="150" WidthRequest="150"/>
+                </VerticalStackLayout>
+
+                
+                <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                    <Label FontSize="24">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="The " TextColor="White" />
+                                <Span Text="#1 " TextColor="Orange" FontAttributes="Bold"/>
+                                <Span Text="Siomai " TextColor="Orange" FontAttributes="Bold"/>
+                                <Span Text="Brand" TextColor="Orange" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="in Luzon, Visayas and Mindanao" FontSize="16" TextColor="White"/>
+                    <Label Text="#1 BUY 1 TAKE 1 FRIED NOODLES NATIONWIDE 🇵🇭" FontSize="14" TextColor="White"/>
+                    <Label Text="Siomura!" FontSize="14" FontAttributes="Italic, Bold" TextColor="White"/>
+                </VerticalStackLayout>
+
+               
+                <Grid Padding="30,40">
+                    
+                    <Image Source="pbackground.jpg" Aspect="AspectFill" />
+
+                    
+                    <BoxView BackgroundColor="Red" Opacity="0.8" VerticalOptions="Fill" HorizontalOptions="Fill"/>
+
+                    <VerticalStackLayout Spacing="20" VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                        <Label Text="Now with over "
+                            FontSize="24"
+                            TextColor="White"
+                            HorizontalOptions="Center"/>
+                        <Label HorizontalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="20 " TextColor="Orange" FontSize="24" FontAttributes="Bold"/>
+                                    <Span Text="thriving franchises across the Philippines, " TextColor="White"/>
+                                    <Span Text="we are committed lto delivering authentic flavors and quality siomai to every Filipino." TextColor="White"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </VerticalStackLayout>
+                </Grid>
+
+                
+                <Label Text="Go to Products"
+                    TextColor="OrangeRed"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    Padding="10">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProductsTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                
+                <VerticalStackLayout Padding="20" Margin="0,40,0,20" HorizontalOptions="Center">
+                    <Label Text="Contact and Information"
+                        FontSize="22"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"/>
+                    <Label Text="Looking for more information? Email Us"
+                        FontSize="16"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Margin="0,5,0,20"/>
+                    <Grid ColumnDefinitions="*,*" Padding="10" HorizontalOptions="FillAndExpand">
+                        
+                        <VerticalStackLayout Spacing="2" Padding="10" Grid.Column="0" HorizontalOptions="StartAndExpand">
+                            <Label Text="Head Office" FontAttributes="Bold" TextColor="White"/>
+                            <Label Text="11 A Bonifacio, Quezon City, Metro Manila, Philippines"
+                                FontSize="14"
+                                TextColor="White"
+                                LineBreakMode="WordWrap"/>
+                            <Label Text="Office Hours" FontAttributes="Bold" TextColor="White" Margin="0,10,0,0"/>
+                            <Label Text="MONDAY – FRIDAY 9:00am – 5:00pm"
+                                FontSize="14"
+                                TextColor="White"/>
+                        </VerticalStackLayout>
+
+                        
+                        <VerticalStackLayout Spacing="2" Padding="10" Grid.Column="1" HorizontalOptions="EndAndExpand">
+                            <Label Text="Customer Service" FontAttributes="Bold" TextColor="White"/>
+                            <Label Text="(02) 8 709 5288" FontSize="14" TextColor="White"/>
+                            <Label Text="(02) 8 709 0901" FontSize="14" TextColor="White"/>
+                            <Label Text="Franchising" FontAttributes="Bold" TextColor="White" Margin="0,20,0,0"/>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Email: " TextColor="White"/>
+                                        <Span Text="siomura.ph@gmail.com" TextColor="LightBlue"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </VerticalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
